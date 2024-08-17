@@ -1,4 +1,5 @@
 package cmd
+
 import (
 	"fmt"
 	"strings"
@@ -20,22 +21,17 @@ spearheading initiatives to migrate customers off of them.
 Pouya Tavakoli
 `
 
-generatePDF(content string, filename string) error {
+// generatePDF(content string, filename string) error {
 
-
-}
-
+// }
 
 func GenerateCoverLetter(company string, position string) {
-	replacements := map[string] string {
-		"{company}": company,
-		"{position}": position,
-	}
+	replacer := strings.NewReplacer(
+		"{company}", company,
+		"{position}", position,
+	)
+	final_cover_letter := replacer.Replace(DEFAULT_COVER_LETTER_TEMPLATE)
+	// filename := company + ".pdf"
+	fmt.Println(final_cover_letter)
 
-	for placeholder, value := range replacements {
-		final_cover_letter = strings.Replace(DEFAULT_COVER_LETTER_TEMPLATE, placeholder, value, -1)
-	} 
-	filename := company + ".pdf"
-
-	generatePDF(final_cover_letter, filename)
 }

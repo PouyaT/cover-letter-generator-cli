@@ -16,6 +16,7 @@ var generateCmd = &cobra.Command{
 	Long:  `Generates a Cover Letter pdf file based on a reference file, position, and company.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("generate called")
+		GenerateCoverLetter("Google", "Sr engineer")
 	},
 }
 
