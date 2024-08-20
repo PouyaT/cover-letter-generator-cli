@@ -2,7 +2,10 @@ module cover-letter-generator
 
 go 1.21.0
 
-require github.com/spf13/cobra v1.8.1
+require (
+	github.com/go-pdf/fpdf v0.9.0
+	github.com/spf13/cobra v1.8.1
+)
 
 require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
