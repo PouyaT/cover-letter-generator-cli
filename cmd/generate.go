@@ -11,8 +11,9 @@ import (
 
 // generateCmd represents the generate command
 var generateCmd = &cobra.Command{
-	Use:   "generate",
-	Short: "Generates a Cover Letter pdf file",
+	Use:     "generate",
+	Aliases: []string{"gen"},
+	Short:   "Generates a Cover Letter pdf file",
 	Long: `Generates a Cover Letter pdf file based on a company name, position, and a default template.
 	To use the command pass in the company name as the first argument and the position as the second argument. 
 	Example: cover-letter-generator generate Google "Senior Engineer" (Note if the position is two words pass it in with quotes)

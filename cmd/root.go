@@ -9,14 +9,16 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var version = "0.0.3"
+
+// TODO: Figure out why the command is working for cover-letter-generator and not cl-gen
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "cover-letter-generator",
-	Short: "A CLI to generate Cover Letters",
-	Long:  `Cover Letter Generator is a CLI to create Cover Letters from a reference file and will output the cover letter as a pdf.`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
+	Version: version,
+	Use:     "cover-letter-generator [command] [flags]",
+	Short:   "A CLI to generate Cover Letters",
+	Long: `Cover Letter Generator is a CLI to create Cover Letters from a default template and will output the cover letter as a pdf.
+	To use the command call cover-letter-generator generate Google "Senior Engineer" (Note if the position is two words pass it in with quotes)`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
