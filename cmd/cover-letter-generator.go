@@ -22,6 +22,9 @@ currently work with 50+ clusters per environment with each one having around 100
 With the largest cluster having around ~5k pods. I am also part of an on call rotation where I fix
 any issues that may arise in production.
 
+On top of the infrastructure management I've developed and maintained Kubernetes controllers and an API that
+users utilize to create Kubernetes objects.
+
 I also have experience with handling and getting up to speed with legacy platforms and
 spearheading initiatives to migrate customers off of them.
 
